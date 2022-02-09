@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import MainView from './components/views/MainView/MainView';
 import { GlobalStyles } from './styles/GlobalStyles';
 import { Reset } from './styles/Reset';
-import theme from './styles/theme';
+import { theme } from './styles/theme';
 
 function App() {
 	return (
