@@ -8,4 +8,8 @@ html {
 	background-color: ${({ theme }) => theme.primary};
 	color: ${({ theme }) => theme.fontColor.primary};	
 }
+
+h1 {
+	font-size: ${({ theme }) => theme.fontSize.xl}
+}
 `;

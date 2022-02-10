@@ -1,6 +1,7 @@
 export const theme: ThemeProps = {
 	primary: '#222831',
 	secondary: '#2C3440',
+	tertiary: '#29a19c',
 	fontColor: {
 		primary: '#fff',
 		secondary: '#2a7779',
@@ -23,6 +24,7 @@ export const theme: ThemeProps = {
 export type ThemeProps = {
 	primary: string;
 	secondary: string;
+	tertiary: string;
 	fontColor: { primary: string; secondary: string };
 	fontSize: {
 		s: string;
