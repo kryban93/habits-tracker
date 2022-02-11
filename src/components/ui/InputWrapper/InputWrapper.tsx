@@ -7,8 +7,8 @@ export default function InputWrapper({
 }: InputWrapperProps) {
 	return (
 		<StyledWrapper>
-			<StyledLabel>{label}</StyledLabel>
 			{children}
+			<StyledLabel>{label}</StyledLabel>
 		</StyledWrapper>
 	);
 }
@@ -19,6 +19,15 @@ export type InputWrapperProps = {
 	id: string;
 };
 
-const StyledWrapper = styled.div``;
+const StyledWrapper = styled.div`
+	position: relative;
+	margin: 10px;
+`;
 
-const StyledLabel = styled.label``;
+const StyledLabel = styled.label`
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	font-size: ${({ theme }) => theme.fontSize.ml};
+	transition: font-size 0.3s, top 0.3s;
+`;

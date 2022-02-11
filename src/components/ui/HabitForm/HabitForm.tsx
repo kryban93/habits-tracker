@@ -11,13 +11,13 @@ export default function HabitForm({}: HabitFormProps) {
 			<StyledHeading>Habits form</StyledHeading>
 			<form onSubmit={submitFn}>
 				<Input
-					name="Title"
+					name="title"
 					value={titleState}
 					onChangeFn={(event: React.FormEvent<HTMLInputElement>) =>
 						setTitleState(event.currentTarget.value)
 					}
 					id="title"
-					label="Title"
+					label="title"
 				/>
 			</form>
 		</StyledWrapper>
