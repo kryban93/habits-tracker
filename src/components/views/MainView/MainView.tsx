@@ -9,28 +9,26 @@ import HabitForm from '../../ui/HabitForm/HabitForm';
 export default function MainView() {
 	const [isModalOpen, setModalOpenState] = useState(true);
 
+	const onModalClose = () => {
+		setModalOpenState(false);
+	};
+
 	return (
 		<StyledWrapper>
 			<StyledHeader>Main view</StyledHeader>
-			<Button
-				type="button"
-				onClick={() => console.log('click')}
-				variant="secondary"
-			>
-				lol
-			</Button>
+
 			<StyledButton
 				type="button"
 				onClick={() => setModalOpenState(true)}
 				variant="secondary"
-				rounded
 				iconOnly
 			>
-				<IconComponent src={icons.plus} size={40} />
+				<IconComponent src={icons.plus} size={40} alt="Add new habit button" />
+				<StyledButtonParagraph>Add new habit</StyledButtonParagraph>
 			</StyledButton>
 
 			{isModalOpen && (
-				<Modal>
+				<Modal onModalClose={onModalClose}>
 					<HabitForm />
 				</Modal>
 			)}
@@ -38,14 +36,25 @@ export default function MainView() {
 	);
 }
 
-const StyledWrapper = styled.section``;
+const StyledWrapper = styled.section`
+	@media screen and (min-width: 768px) {
+		margin-left: 60px;
+	}
+`;
 
 const StyledHeader = styled.h1`
-	margin: 20px 5px;
+	margin: 20px;
+`;
+
+const StyledButtonParagraph = styled.p`
+	font-weight: ${({ theme }) => theme.fontWeight.bold};
+	font-size: ${({ theme }) => theme.fontSize.s};
+	padding: 0 10px;
 `;
 
 const StyledButton = styled(Button)`
 	position: absolute;
-	bottom: 50px;
-	right: 50px;
+	top: 20px;
+	right: 20px;
+	border-radius: 5px;
 `;

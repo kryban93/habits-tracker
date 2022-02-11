@@ -23,4 +23,7 @@ export type InputProps = {
 	onChangeFn: (event: React.FormEvent<HTMLInputElement>) => void;
 };
 
-const StyledInput = styled.input``;
+const StyledInput = styled.input`
+	background-color: ${({ theme }) => theme.primary};
+	border: none;
+`;

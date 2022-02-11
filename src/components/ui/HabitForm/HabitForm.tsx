@@ -8,7 +8,7 @@ export default function HabitForm({}: HabitFormProps) {
 	function submitFn() {}
 	return (
 		<StyledWrapper>
-			<h1>Habits form</h1>
+			<StyledHeading>Habits form</StyledHeading>
 			<form onSubmit={submitFn}>
 				<Input
 					name="Title"
@@ -26,4 +26,13 @@ export default function HabitForm({}: HabitFormProps) {
 
 export type HabitFormProps = {};
 
-const StyledWrapper = styled.div``;
+const StyledWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+`;
+
+const StyledHeading = styled.h1`
+	margin: 20px;
+`;

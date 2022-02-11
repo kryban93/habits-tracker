@@ -1,15 +1,32 @@
 import styled from 'styled-components';
+import icons from '../../../assets/icons';
+import Button from '../Button/Button';
+import IconComponent from '../IconComponent/IconComponent';
 
-export default function Modal({ children }: ModalProps) {
+export default function Modal({
+	children,
+	onModalClose = () => {},
+}: ModalProps) {
 	return (
 		<StyledOverlay>
-			<ModalContent>{children}</ModalContent>
+			<ModalContent>
+				<StyledButton
+					onClick={onModalClose}
+					variant="primary"
+					type="button"
+					iconOnly
+				>
+					<IconComponent src={icons.close} size={30} alt="close modal button" />
+				</StyledButton>
+				{children}
+			</ModalContent>
 		</StyledOverlay>
 	);
 }
 
 export type ModalProps = {
 	children: React.ReactNode;
+	onModalClose: () => void;
 };
 
 const StyledOverlay = styled.div`
@@ -28,8 +45,15 @@ const StyledOverlay = styled.div`
 `;
 
 const ModalContent = styled.div`
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	width: 90%;
 	background-color: ${({ theme }) => theme.secondary};
+`;
+
+const StyledButton = styled(Button)`
+	position: absolute;
+	right: 20px;
+	top: 20px;
 `;

@@ -10,6 +10,12 @@ html {
 }
 
 h1 {
-	font-size: ${({ theme }) => theme.fontSize.xl}
+	font-size: ${({ theme }) => theme.fontSize.xl};
+	color: ${({ theme }) => theme.fontColor.primary};	
+}
+
+p {
+	color: ${({ theme }) => theme.fontColor.primary};	
+	
 }
 `;
