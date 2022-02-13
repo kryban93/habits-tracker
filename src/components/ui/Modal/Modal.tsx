@@ -50,6 +50,7 @@ const ModalContent = styled.div`
 	flex-direction: column;
 	width: 90%;
 	background-color: ${({ theme }) => theme.secondary};
+	border-radius: 5px;
 `;
 
 const StyledButton = styled(Button)`

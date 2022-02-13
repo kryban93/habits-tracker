@@ -19,6 +19,7 @@ export default function HabitForm({}: HabitFormProps) {
 					id="title"
 					label="title"
 				/>
+				<h2>Add data You want to track</h2>
 			</form>
 		</StyledWrapper>
 	);

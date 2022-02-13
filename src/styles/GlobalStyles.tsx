@@ -14,6 +14,10 @@ h1 {
 	color: ${({ theme }) => theme.fontColor.primary};	
 }
 
+h2 {
+	font-size: ${({ theme }) => theme.fontSize.l}
+}
+
 p {
 	color: ${({ theme }) => theme.fontColor.primary};	
 	
