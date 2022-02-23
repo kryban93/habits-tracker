@@ -7,10 +7,17 @@ export default function Input({
 	id = '',
 	onChangeFn = () => {},
 	label = '',
+	type = 'text',
 }: InputProps) {
 	return (
 		<InputWrapper label={label} id={id}>
-			<StyledInput name={name} value={value} id={id} onChange={onChangeFn} />
+			<StyledInput
+				name={name}
+				value={value}
+				id={id}
+				onChange={onChangeFn}
+				type={type}
+			/>
 		</InputWrapper>
 	);
 }
@@ -20,6 +27,7 @@ export type InputProps = {
 	value: string;
 	id: string;
 	label: string;
+	type?: 'password' | 'text';
 	onChangeFn: (event: React.FormEvent<HTMLInputElement>) => void;
 };
 

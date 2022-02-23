@@ -30,6 +30,7 @@ export default function LoginView() {
 							label="password"
 							name="password"
 							value={password}
+							type="password"
 							onChangeFn={(event: React.FormEvent<HTMLInputElement>) =>
 								setPassword(event.currentTarget.value)
 							}
@@ -51,7 +52,7 @@ const StyledWrapper = styled.section`
 `;
 
 const StyledHeading = styled.h1`
-	margin: 20px;
+	margin-bottom: 50px;
 `;
 
 const InputWrapper = styled.div`
@@ -59,7 +60,6 @@ const InputWrapper = styled.div`
 	background-color: rgba(0, 0, 0, 0.2);
 	box-sizing: border-box;
 	margin: 10px;
-
 	display: flex;
 `;
 
