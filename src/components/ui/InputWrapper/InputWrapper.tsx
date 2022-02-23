@@ -8,7 +8,7 @@ export default function InputWrapper({
 	return (
 		<StyledWrapper>
 			{children}
-			<StyledLabel>{label}</StyledLabel>
+			<StyledLabel htmlFor={id}>{label}</StyledLabel>
 		</StyledWrapper>
 	);
 }
@@ -30,4 +30,5 @@ const StyledLabel = styled.label`
 	left: 5px;
 	font-size: ${({ theme }) => theme.fontSize.ml};
 	transition: font-size 0.3s, top 0.3s;
+	cursor: text;
 `;

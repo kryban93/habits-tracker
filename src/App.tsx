@@ -16,8 +16,8 @@ function App() {
 				<BrowserRouter>
 					<Nav />
 					<Routes>
-						<Route path="/" element={<MainView />} />
 						<Route path="/login" element={<LoginView />} />
+						<Route path="/" element={<MainView />} />
 					</Routes>
 				</BrowserRouter>
 			</main>
