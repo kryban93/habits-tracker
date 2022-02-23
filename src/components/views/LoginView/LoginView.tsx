@@ -1,12 +1,18 @@
 import { useState } from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import Input from '../../ui/Input/Input';
+import background from '../../../assets/background.jpg';
+import Button from '../../ui/Button/Button';
 
 export default function LoginView() {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
+	const navigate = useNavigate();
 
-	function handleSubmit() {}
+	function handleSubmit() {
+		navigate('/dashboard');
+	}
 
 	return (
 		<StyledWrapper>
@@ -36,6 +42,9 @@ export default function LoginView() {
 							}
 						/>
 					</InputWrapper>
+					<Button variant="primary" onClick={() => handleSubmit} type="submit">
+						Login
+					</Button>
 				</form>
 			</StyledFormContainer>
 		</StyledWrapper>
@@ -45,7 +54,8 @@ export default function LoginView() {
 const StyledWrapper = styled.section`
 	height: 100vh;
 	width: 100vw;
-	background-image: url('../../../assets/background.jpg');
+	background: url(${background}) center no-repeat;
+	background-size: cover;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -57,7 +67,7 @@ const StyledHeading = styled.h1`
 
 const InputWrapper = styled.div`
 	padding: 17px 20px;
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.6);
 	box-sizing: border-box;
 	margin: 10px;
 	display: flex;
@@ -67,7 +77,7 @@ const StyledFormContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.7);
 	padding: 60px;
 	border-radius: 5px;
 `;

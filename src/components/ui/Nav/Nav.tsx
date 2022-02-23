@@ -6,7 +6,7 @@ import logo from '../../../assets/logo.svg';
 export default function Nav() {
 	return (
 		<StyledNav>
-			<StyledLogoLink to="/">
+			<StyledLogoLink to="/dashboard">
 				<IconComponent src={logo} alt="Logo of Habit Tracker" size={50} />
 			</StyledLogoLink>
 		</StyledNav>

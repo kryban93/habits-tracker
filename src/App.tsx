@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import Nav from './components/ui/Nav/Nav';
+import LandingPage from './components/views/LandingPage/LandingPage';
 import LoginView from './components/views/LoginView/LoginView';
 import MainView from './components/views/MainView/MainView';
 import { GlobalStyles } from './styles/GlobalStyles';
@@ -16,8 +17,9 @@ function App() {
 				<BrowserRouter>
 					<Nav />
 					<Routes>
+						<Route path="/" element={<LandingPage />} />
 						<Route path="/login" element={<LoginView />} />
-						<Route path="/" element={<MainView />} />
+						<Route path="/dashboard" element={<MainView />} />
 					</Routes>
 				</BrowserRouter>
 			</main>
