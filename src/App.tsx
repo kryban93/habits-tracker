@@ -4,6 +4,7 @@ import Nav from './components/ui/Nav/Nav';
 import LandingPage from './components/views/LandingPage/LandingPage';
 import LoginView from './components/views/LoginView/LoginView';
 import MainView from './components/views/MainView/MainView';
+import SignUpView from './components/views/SignUpView/SignUpView';
 import { GlobalStyles } from './styles/GlobalStyles';
 import { Reset } from './styles/Reset';
 import { theme } from './styles/theme';
@@ -19,6 +20,8 @@ function App() {
 					<Routes>
 						<Route path="/" element={<LandingPage />} />
 						<Route path="/login" element={<LoginView />} />
+						<Route path="/signup" element={<SignUpView />} />
+
 						<Route path="/dashboard" element={<MainView />} />
 					</Routes>
 				</BrowserRouter>

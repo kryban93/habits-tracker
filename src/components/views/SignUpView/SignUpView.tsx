@@ -1,24 +1,19 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import Input from '../../ui/Input/Input';
 import background from '../../../assets/background.jpg';
+import Input from '../../ui/Input/Input';
 import Button from '../../ui/Button/Button';
 
-export default function LoginView() {
+export default function SignUpView() {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
-	const navigate = useNavigate();
-
-	function handleSubmit() {
-		navigate('/dashboard');
-	}
+	const [confirmPassword, setConfirmPassword] = useState('');
 
 	return (
 		<StyledWrapper>
 			<StyledFormContainer>
-				<StyledHeading>Welcome</StyledHeading>
-				<form onSubmit={handleSubmit}>
+				<StyledHeading> Hello, Sign Up!</StyledHeading>
+				<form>
 					<InputWrapper>
 						<Input
 							id="email"
@@ -42,8 +37,20 @@ export default function LoginView() {
 							}
 						/>
 					</InputWrapper>
-					<Button variant="primary" onClick={() => handleSubmit} type="submit">
-						Login
+					<InputWrapper>
+						<Input
+							id="confirmPassword"
+							label="confirm password"
+							name="confirmPassword"
+							value={confirmPassword}
+							type="password"
+							onChangeFn={(event: React.FormEvent<HTMLInputElement>) =>
+								setConfirmPassword(event.currentTarget.value)
+							}
+						/>
+					</InputWrapper>
+					<Button variant="primary" onClick={() => {}} type="submit">
+						Sign Up
 					</Button>
 				</form>
 			</StyledFormContainer>
