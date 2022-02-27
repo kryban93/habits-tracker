@@ -14,5 +14,6 @@ export default function DataWrapper() {
 
 const StyledWrapper = styled.div`
 	display: flex;
+	flex-wrap: wrap;
 	gap: 20px;
 `;

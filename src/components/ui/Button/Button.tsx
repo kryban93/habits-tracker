@@ -47,4 +47,5 @@ const StyledButton = styled.button<Partial<ButtonProps>>`
 	box-sizing: border-box;
 	margin: ${({ iconOnly }) => (iconOnly ? '0px' : '5px')};
 	padding: ${({ iconOnly }) => (iconOnly ? '3px' : '5px 20px')};
+	cursor: pointer;
 `;

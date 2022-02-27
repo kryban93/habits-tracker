@@ -40,13 +40,15 @@ export default function MainView() {
 }
 
 const StyledWrapper = styled.section`
+	display: flex;
+	flex-direction: column;
 	@media screen and (min-width: 768px) {
 		margin-left: 60px;
 	}
 `;
 
 const StyledHeader = styled.h1`
-	margin: 20px;
+	margin: 20px 20px 50px;
 `;
 
 const StyledButtonParagraph = styled.p`
