@@ -37,6 +37,7 @@ export type ButtonProps = {
 };
 
 const StyledButton = styled.button<Partial<ButtonProps>>`
+	flex-shrink: 1;
 	background-color: ${({ theme, variant }) =>
 		variant === 'primary' ? theme.primary : theme.tertiary};
 	border: none;

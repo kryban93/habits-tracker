@@ -5,6 +5,7 @@ import IconComponent from '../../ui/IconComponent/IconComponent';
 import icons from '../../../assets/icons';
 import Modal from '../../ui/Modal/Modal';
 import HabitForm from '../../ui/HabitForm/HabitForm';
+import DataWrapper from '../../ui/DataWrapper/DataWrapper';
 
 export default function MainView() {
 	const [isModalOpen, setModalOpenState] = useState(true);
@@ -16,6 +17,8 @@ export default function MainView() {
 	return (
 		<StyledWrapper>
 			<StyledHeader>Main view</StyledHeader>
+
+			<DataWrapper />
 
 			<StyledButton
 				type="button"

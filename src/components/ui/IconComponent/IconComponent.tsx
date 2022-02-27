@@ -11,6 +11,7 @@ export default function IconComponent({
 const StyledIcon = styled.img<Partial<IconComponentProps>>`
 	width: ${({ size }) => `${size}px`};
 	height: ${({ size }) => `${size}px`};
+	flex-shrink: 0;
 `;
 
 export type IconComponentProps = {

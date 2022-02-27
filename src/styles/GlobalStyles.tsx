@@ -18,6 +18,10 @@ h2 {
 	font-size: ${({ theme }) => theme.fontSize.l}
 }
 
+h3 {
+	font-size: ${({ theme }) => theme.fontSize.ml}
+}
+
 p {
 	color: ${({ theme }) => theme.fontColor.primary};	
 	
