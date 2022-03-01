@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import styled from 'styled-components';
+import Button from '../Button/Button';
 import Input from '../Input/Input';
 
 export default function HabitForm({}: HabitFormProps) {
 	const [titleState, setTitleState] = useState('');
+	const [habitData, setHabitData] = useState('');
+	const [unitData, setUnitData] = useState('');
 
 	function submitFn() {}
 	return (
@@ -20,6 +23,29 @@ export default function HabitForm({}: HabitFormProps) {
 					label="title"
 				/>
 				<h2>Add data You want to track</h2>
+				<Input
+					name="habit"
+					value={habitData}
+					onChangeFn={(event: React.FormEvent<HTMLInputElement>) =>
+						setHabitData(event.currentTarget.value)
+					}
+					id="habit"
+					label="habit"
+				/>
+				<p>Do You want to add unit?</p>
+				<Input
+					name="unit"
+					value={unitData}
+					onChangeFn={(event: React.FormEvent<HTMLInputElement>) =>
+						setUnitData(event.currentTarget.value)
+					}
+					id="unit"
+					label="unit"
+				/>
+
+				<Button variant="secondary" type="submit" onClick={() => submitFn()}>
+					Add habit
+				</Button>
 			</form>
 		</StyledWrapper>
 	);
