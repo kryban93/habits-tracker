@@ -69,6 +69,7 @@ const StyledWrapper = styled.div`
 	background-color: ${({ theme }) => theme.secondary};
 	padding: 10px 20px;
 	border-radius: 3px;
+	height: max-content;
 `;
 
 const StyledIconContainer = styled.div`
